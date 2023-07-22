@@ -1,24 +1,7 @@
 {
-  "name": "svelte-deckgl",
-  "description": "Use Deck.gl and Mapbox in svelte",
-  "version": "1.0.0",
-  "main": "dist/index.min.js",
-  "module": "dist/index.min.mjs",
-  "svelte": "src/components/components.module.js",
-  "license": "MIT",
-  "repository": "//https://github.com/arperyan/svelte-deckgl",
-  "author": "Ryan Arpe",
-  "files": [
-    "src/components",
-    "dist"
-  ],
-  "keywords": [
-    "svelte",
-    "deck.gl",
-    "mapbox"
-  ],
+  "name": "svelte-deckgl-rollup",
+  "version": "1.0.1",
   "scripts": {
-    "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public"
   },

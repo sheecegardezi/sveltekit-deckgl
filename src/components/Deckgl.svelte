@@ -2,31 +2,20 @@
     import { Deck } from "@deck.gl/core";
     import mapbox from "mapbox-gl";
     import { onMount } from "svelte";
-    // import { layerState } from "../../../svelte-deckgl/src/App.svelte";
 
-    /** @type {Object.<string, number>}*/
     let map = null;
-    /** @type {Object.<string, number>}*/
     export let deck = null;
-    /** @type {HTMLElement} */
     let deckMap = null;
-    /** @type {HTMLElement} */
     let deckCanvas = null;
-    /** @type {Object.<string, number>} - mapbox gl extra view States*/
     let options = {};
 
-    /** @type {Array.<string, object>}*/
     export let layers = [];
-    /** @type {Object.<string, number>}*/
     export let viewState = {};
-    /** @type {String}*/
     export let TOKEN = null;
-    /** @type {Function} */
     export let getTooltip = () => {};
     $: console.log(layers);
     onMount(() => {
         // creating the map
-
         mapbox.accessToken = TOKEN;
         const link = document.createElement("link");
         link.rel = "stylesheet";
@@ -53,15 +42,11 @@
             render();
             deck.setProps({ layers: [layers] });
         };
-
         return () => {
             map.remove();
             link.parentNode.removeChild(link);
         };
     });
-
-    //$: console.log($layerState);
-
     // creating the deck.gl instance
     function render() {
         deck = new Deck({
@@ -79,11 +64,8 @@
                     pitch: viewState.pitch,
                 });
             },
-
             getTooltip,
         });
-
-        //
     }
 </script>
 
