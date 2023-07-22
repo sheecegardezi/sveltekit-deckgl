@@ -68744,7 +68744,7 @@ var app = (function () {
     			div = element("div");
     			create_component(sveltedeckgl.$$.fragment);
     			attr_dev(div, "class", "App svelte-1v6k3bm");
-    			add_location(div, file, 32, 0, 747);
+    			add_location(div, file, 30, 0, 676);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
